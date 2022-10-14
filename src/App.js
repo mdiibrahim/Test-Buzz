@@ -25,6 +25,7 @@ function App() {
         },
         {
           path: '/analysis',
+          loader: async()=> fetch('https://openapi.programming-hero.com/api/quiz'),
           element: <Analysis></Analysis>,
         },
         {
