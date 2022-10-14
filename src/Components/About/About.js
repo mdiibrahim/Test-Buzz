@@ -1,9 +1,10 @@
 import React from 'react';
+import Profile from '../Profile/Profile';
 
 const About = () => {
     return (
         <div>
-            <h2>this is about</h2>
+            <Profile></Profile>
         </div>
     );
 };
