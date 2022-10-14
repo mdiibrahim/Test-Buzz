@@ -1,8 +1,8 @@
 import React from 'react';
-import './Profile.css'
+import './Intro.css'
 
 
-function Profile() {
+function Intro() {
     return (
         <div className='bg-dark rounded-2'>
             <section className='my-5 d-flex align-items-center'>
@@ -19,4 +19,4 @@ function Profile() {
     );
 }
 
-export default Profile;
+export default Intro;

@@ -1,10 +1,13 @@
 import React from 'react';
-import Profile from '../Profile/Profile';
+import { useLoaderData } from 'react-router-dom';
+import Intro from '../Intro/Intro';
 import './Home.css';
 const Home = () => {
+    const datas = useLoaderData();
+    const { data } = datas;
     return (
         <div className='container'>
-            <Profile></Profile>
+            <Intro></Intro>
         </div>
     );
 };
