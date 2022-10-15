@@ -1,5 +1,11 @@
-
-
-.carousel-indicators button {
-    visibility: hidden;
+@media screen and (max-width:992px) {
+    div img{
+        width: 80vw;
+    }
+    .intro-text h3{
+        font-size: 1rem;
+    }
+    .intro-text{
+        font-size: .5rem;
+    }
 }
