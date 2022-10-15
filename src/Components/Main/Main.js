@@ -1,7 +1,6 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 import Header from '../Header/Header';
-import Intro from '../Intro/Intro';
 import './Main.css';
 
 const Main = () => {

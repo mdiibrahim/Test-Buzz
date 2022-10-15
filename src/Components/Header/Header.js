@@ -9,12 +9,15 @@ function Header() {
     return (
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" sticky='top'>
             <Container>
-                <Navbar.Brand href=""><Link to='/quiz'>Test Buzz</Link></Navbar.Brand>
+                <Navbar.Brand href=""><Link to='/'>Test Buzz</Link></Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
                     </Nav>
                     <Nav>
+                        <Nav.Link>
+                            <Link to='/quiz'>Quiz</Link>
+                        </Nav.Link>
                         <Nav.Link>
                             <Link to='/blog'>Blog</Link>
                         </Nav.Link>

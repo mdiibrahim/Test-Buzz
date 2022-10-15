@@ -12,10 +12,17 @@ import QuizDetails from './Components/QuizDetails/QuizDetails';
 
 function App() {
   const router = createBrowserRouter([
+
+  
     {
       path: '/',
       element: <Main></Main>,
       children: [
+        {
+          path: '/',
+          loader: async()=>fetch('https://openapi.programming-hero.com/api/quiz'),
+          element: <Home></Home>,
+        },
         {
           path: '/quiz',
           loader: async()=>fetch('https://openapi.programming-hero.com/api/quiz'),
@@ -23,8 +30,11 @@ function App() {
         },
         {
           path: '/quiz/:quizId',
-          loader: async(params)=>fetch(`https://openapi.programming-hero.com/api/quiz/${params.quizId}`),
-          element: <QuizDetails></QuizDetails>
+          loader: async ({params}) => {
+           
+            return fetch(`https://openapi.programming-hero.com/api/quiz/${params.quizId}`)
+          },
+          element: <QuizDetails></QuizDetails>,
         },
         {
           path: '/blog',
