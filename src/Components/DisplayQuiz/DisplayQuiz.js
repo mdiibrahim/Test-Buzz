@@ -23,7 +23,16 @@ const DisplayQuiz = ({ no, q }) => {
 
     const { correctAnswer, options, question } = q;
     const [show, setShow] = useState(false);
-
+    const handleAns = (checkedAns) => {
+        
+        if (correctAnswer === checkedAns) {
+            
+            alert('Congrats!! your answer is correct')
+        }
+        else {
+            alert('Oooooppss! Your answer is wrong')
+        }
+    }
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     return (
@@ -42,7 +51,7 @@ const DisplayQuiz = ({ no, q }) => {
                         return (
 
                             <div key={idx + 10}>
-                                <label className="opt" id="ans" >
+                                <label className="opt" id="ans" onClick={()=>handleAns(option)}>
                                     {option}
                                     <input type="radio" checked={true} name="radio" />
                                     <span className="checkmark"></span>
