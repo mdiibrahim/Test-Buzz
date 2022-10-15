@@ -1,46 +1,34 @@
 import './Header.css';
-import React, { useState } from 'react';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+
 import { Link } from 'react-router-dom';
 
-
-const Header = () => {
-    const routes = [
-        {
-            id: 1, name: 'Home', path: '/'
-        },
-        {
-            id: 2, name: 'Blog', path: '/blog'
-        },
-        {
-            id: 3, name: 'Anlysis', path: '/analysis'
-        },
-        {
-            id: 4, name: 'About', path: '/about'
-        }
-    ]
-    
-    
+function Header() {
     return (
-        <nav>
-            <nav className='d-flex justify-content-center shadow p-3 mb-5 bg-body rounded'>
-                {
-                    routes.map(route => {
-                        return (
-                            
-                            <Link
-                                key={route.id}
-                                to={route.path}
-                                className='text-decoration-none mx-auto'
-                                
-                            >
-                            {route.name}</Link>
-                        )
-                    })
-                }
-            </nav>
-
-        </nav>
+        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" sticky='top'>
+            <Container>
+                <Navbar.Brand href=""><Link to='/quiz'>Test Buzz</Link></Navbar.Brand>
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                <Navbar.Collapse id="responsive-navbar-nav">
+                    <Nav className="me-auto">
+                    </Nav>
+                    <Nav>
+                        <Nav.Link>
+                            <Link to='/blog'>Blog</Link>
+                        </Nav.Link>
+                        <Nav.Link eventKey={2}>
+                            <Link to='/analysis'>Analysis</Link>
+                        </Nav.Link>
+                        <Nav.Link eventKey={3}>
+                            <Link to='/about'>About</Link>
+                        </Nav.Link>
+                    </Nav>
+                </Navbar.Collapse>
+            </Container>
+        </Navbar>
     );
-};
+}
 
 export default Header;
