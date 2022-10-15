@@ -58,3 +58,7 @@
     border-radius: 50%;
     background: white;
 }
+.font-icon:hover{
+    cursor: pointer;
+   color: aqua;
+}
