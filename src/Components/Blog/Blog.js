@@ -1,5 +1,4 @@
 import React from 'react';
-import './Blog.css';
 import Accordion from 'react-bootstrap/Accordion';
 
 function Blog() {
