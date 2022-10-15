@@ -5,8 +5,8 @@ import React from 'react';
 const About = () => {
     return (
         <div>
-            <div className='my-5'>
-                <div className='container d-flex align-items-center justify-content-center shadow-lg p-5 mb-5 rounded'>
+            <div className='my-5 container '>
+                <div className='d-flex flex-column flex-lg-row align-items-center justify-content-center shadow-lg p-5 mb-5 rounded '>
                     <div>
                         <img className='w-75' src="profile.png" alt="" />
                     </div>
