@@ -15,18 +15,18 @@ function Header() {
                     <Nav className="me-auto">
                     </Nav>
                     <Nav>
-                        <Nav.Link>
+                        <div className='nav-link'>
                             <Link to='/quiz'>Quiz</Link>
-                        </Nav.Link>
-                        <Nav.Link>
+                        </div>
+                        <div className='nav-link'>
                             <Link to='/blog'>Blog</Link>
-                        </Nav.Link>
-                        <Nav.Link eventKey={2}>
+                        </div>
+                        <div  className='nav-link'>
                             <Link to='/analysis'>Analysis</Link>
-                        </Nav.Link>
-                        <Nav.Link eventKey={3}>
+                        </div>
+                        <div  className='nav-link'>
                             <Link to='/about'>About</Link>
-                        </Nav.Link>
+                        </div>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

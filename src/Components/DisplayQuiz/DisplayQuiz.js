@@ -12,10 +12,10 @@ const DisplayQuiz = ({ no, q }) => {
                     options.map((option, idx) => {
                         return (
 
-                            <div key={idx + 10} defaultChecked>
-                                <label class="opt">
+                            <div key={idx + 10}>
+                                <label className="opt">
                                     {option}
-                                    <input type="radio" checked='checked' defaultChecked={true} name="radio"/>
+                                    <input type="radio" defaultChecked={true} name="radio"/>
                                     <span className="checkmark"></span>
                                 </label>
                             </div>
